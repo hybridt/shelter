@@ -1,0 +1,33 @@
+.burger {
+  display: none;
+  @include size($width: 3rem, $height: 2.2rem);
+  position: relative;
+  transition: all $transition-duration;
+  z-index: 100;
+
+  &::before {
+    content: '';
+    @include position($position: absolute, $top: 0, $right: 0, $left: 0);
+    @extend %burger-line;
+  }
+
+  &::after {
+    content: '';
+    @include position($position: absolute, $right: 0, $left: 0, $bottom: 0);
+    @extend %burger-line;
+  }
+
+  &.active {
+    transform: rotate(90deg);
+  }
+
+  @media screen and (max-width: ($tablet-width - 1px)) {
+    display: inline-block;
+  }
+}
+
+.burger__line {
+  @include position($position: absolute, $top: 50%, $right: 0, $left: 0);
+  @extend %burger-line;
+  transform: translateY(-50%);
+}

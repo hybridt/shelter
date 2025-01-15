@@ -1,0 +1,14 @@
+.credit-card {
+  @include flex($justify: space-between, $align: center);
+  padding: 1rem 1.5rem;
+  background-color: $color-primary;
+  border-radius: $card-radius;
+
+  &__number {
+    padding-left: 1rem;
+  }
+
+  @media screen and (max-width: $tablet-small-width) {
+    padding: 1.1rem 1.5rem;
+  }
+}

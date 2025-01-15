@@ -1,0 +1,10 @@
+.pagination {
+  list-style: none;
+
+  @include flex($justify: center);
+  gap: 2rem;
+
+  @media screen and (max-width: $tablet-small-width) {
+    gap: 1rem;
+  }
+}

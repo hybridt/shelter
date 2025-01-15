@@ -1,0 +1,144 @@
+.footer {
+  color: $color-primary;
+
+  h3 {
+    color: $color-header-light;
+  }
+
+  h4 {
+    color: $color-primary;
+  }
+}
+
+.footer__wrapper {
+  padding: 4rem 0 0 0;
+
+  @media screen and (max-width: $tablet-large-width) {
+    padding: 3rem 0 0 0;
+  }
+}
+
+.footer__content {
+
+  @media screen and (max-width: $tablet-large-width) {
+    justify-content: center;
+    gap: 6%;
+  }
+
+  @media screen and (max-width: 669px) {
+    flex-direction: column;
+  }
+}
+
+.footer__contacts {
+  padding: 1.6rem 0 0 0;
+  transition: all $transition-duration;
+
+  @media screen and (max-width: $tablet-large-width) {
+    padding: 0 0 0 3.5rem;
+  }
+
+  @media screen and (max-width: 669px) {
+    padding: 0;
+  }
+
+  @media screen and (max-width: $mobile-large-width) {
+    align-self: center;
+    padding: 0 2.5rem;
+  }
+}
+
+.footer__contacts-title {
+  margin-bottom: 4.5rem;
+  max-width: 28rem;
+  transition: all $transition-duration;
+
+  @media screen and (max-width: 669px) {
+    margin: auto auto 4rem auto;
+    text-align: center;
+  }
+}
+
+.footer__email {
+  @include flex($align: center);
+  margin-bottom: 4.5rem;
+
+  @media screen and (max-width: 669px) {
+    margin-bottom: 4.6rem;
+  }
+}
+
+.footer__email-link {
+  padding-left: 2rem;
+}
+
+.footer__phone {
+  @include flex($align: center);
+
+  @media screen and (max-width: 669px) {
+    margin-bottom: 4rem;
+  }
+}
+
+.footer__phone-link {
+  padding-left: 2rem;
+}
+
+.footer__location {
+  padding: 1.6rem 0 0 0;
+  transition: all $transition-duration;
+
+  @media screen and (max-width: $tablet-large-width) {
+    padding: 0;
+  }
+}
+
+.footer__location-title {
+  margin-bottom: 3.4rem;
+  max-width: 28rem;
+  transition: all $transition-duration;
+
+  @media screen and (max-width: 669px) {
+    margin: auto auto 4rem auto;
+    text-align: center;
+  }
+}
+
+.footer__location-info {
+  @include flex($align: center);
+  margin-bottom: 3.2rem;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  @media screen and (max-width: 669px) {
+    margin-bottom: 4rem;
+  }
+}
+
+.footer__address {
+  padding-left: 2rem;
+}
+
+.footer__image {
+  @include size($width: 25%, $height: 31rem);
+  @include responsiveBgImage($bgPosition: right bottom, $url: '../../assets/img/footer/footer-image.png');
+  transition: all $transition-duration;
+
+  @media screen and (max-width: $tablet-large-width) {
+    margin-top: 6rem;
+    flex-basis: auto;
+    width: 86.7%;
+    background-position: center bottom;
+  }
+
+  @media screen and (max-width: 669px) {
+    align-self: center;
+  }
+
+  @media screen and (max-width: $mobile-large-width) {
+    margin-top: 3.8rem;
+    height: 26.9rem;
+  }
+}

@@ -1,0 +1,37 @@
+.icon {
+  display: inline-block;
+  flex: 0 0 auto;
+  background-repeat: no-repeat;
+
+  &_card {
+    @include size($width: 30px, $height: 23px);
+    background-image: url('../../assets/img/donation/credit-card-icon.svg');
+  }
+
+  &_email {
+    @include size($width: 40px, $height: 26px);
+    background-image: url('../../assets/img/footer/mail-icon.svg');
+  }
+
+  &_phone {
+    @include size($width: 40px, $height: 32px);
+    background-image: url('../../assets/img/footer/phone-icon.svg');
+  }
+
+  &_location {
+    @include size($width: 22px, $height: 32px);
+    background-image: url('../../assets/img/footer/location-icon.svg');
+  }
+
+  &_arrow-left {
+    @include size($width: 14px, $height: 6px);
+    background-image: url('../../assets/img/pets/arrow-left.svg');
+    background-position: center;
+  }
+
+  &_arrow-right {
+    @include size($width: 14px, $height: 6px);
+    background-image: url('../../assets/img/pets/arrow-right.svg');
+    background-position: center;
+  }
+}

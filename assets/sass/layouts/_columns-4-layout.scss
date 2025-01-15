@@ -1,0 +1,21 @@
+.columns-4-layout {
+  @include flex($justify: space-between);
+  flex-wrap: wrap;
+  row-gap: 3rem;
+
+  & > * {
+    flex: 0 1 22.5%;
+
+    @media screen and (max-width: 920px) {
+      flex: 0 1 46.55%;
+    }
+
+    @media screen and (max-width: $tablet-small-width) {
+      flex: 0 1 90%;
+    }
+  }
+
+  @media screen and (max-width: $tablet-small-width) {
+    justify-content: center;
+  }
+}

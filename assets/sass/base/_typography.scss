@@ -1,0 +1,45 @@
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+p {
+  @include font($size: 1.5rem, $height: 2.4rem);
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  color: $color-paragraph-L;
+}
+
+h1, h2, h3, h4, h5 {
+  color: $color-header;
+}
+
+h1 {
+  @include font($size: 3.2rem, $height: 3.5rem, $spacing: 0.06em);
+}
+
+h2 {
+  @include font($size: 4.4rem, $height: 5.7rem);
+
+  @media screen and (max-width: $tablet-small-width) {
+    @include font($size: 2.5rem, $height: 3.2rem, $spacing: 0.06em);
+  }
+}
+
+h3 {
+  @include font($size: 3.5rem, $height: 4.5rem, $spacing: 0.06em);
+
+  @media screen and (max-width: $tablet-small-width) {
+    @include font($size: 2.5rem, $height: 3.2rem, $spacing: 0.06em);
+  }
+}
+
+h4 {
+  @include font($size: 2rem, $height: 2.3rem, $spacing: 0.06em);
+}
+
+h5 {
+  @include font($size: 1.5rem, $height: 1.7rem, $spacing: 0.06em);
+
+  @media screen and (max-width: $tablet-small-width) {
+    @include font($size: 1.5rem, $height: 2.4rem, $spacing: normal);
+  }
+}

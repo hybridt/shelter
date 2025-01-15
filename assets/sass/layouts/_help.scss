@@ -1,0 +1,40 @@
+.help {
+  background-color: $color-background-light;
+
+  h4 {
+    @media screen and (max-width: $tablet-small-width) {
+      @include font($size: 1.5rem, $height: 1.7rem, $spacing: 0.06em);
+    }
+  }
+
+  &__wrapper {
+    padding: $section-paddings;
+
+    @media screen and (max-width: $tablet-small-width) {
+      padding: $mobile-section-paddings;
+    }
+  }
+
+  &__title {
+    margin-bottom: 6rem;
+    text-align: center;
+    transition: all $transition-duration;
+
+    @media screen and (max-width: $tablet-small-width) {
+      margin-bottom: 4.2rem;
+    }
+  }
+
+  &__content {
+    max-width: 85.5%;
+    margin: auto;
+
+    @media screen and (max-width: $tablet-large-width) {
+      max-width: 89%;
+    }
+
+    @media screen and (max-width: $tablet-small-width) {
+      max-width: 96.7%;
+    }
+  }
+}

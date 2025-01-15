@@ -1,0 +1,76 @@
+.donation {
+  background-color: $color-background;
+
+  h4 {
+    @media screen and (max-width: $tablet-small-width) {
+      @include font($size: 1.5rem, $height: 1.7rem, $spacing: 0.06em);
+    }
+  }
+
+  &__wrapper {
+    @include flex($justify: center, $align: center);
+    gap: 2.5%;
+    padding: $section-paddings;
+
+    @media screen and (max-width: $tablet-large-width) {
+      flex-direction: column-reverse;
+    }
+
+    @media screen and (max-width: $tablet-small-width) {
+      padding: $mobile-section-paddings;
+    }
+  }
+
+  &__content {
+    @extend %flex-column;
+    gap: 2rem;
+    max-width: 32%;
+    order: 2;
+    transition: all $transition-duration;
+
+    @media screen and (max-width: $tablet-large-width) {
+      margin-bottom: 6rem;
+      max-width: 38rem;
+    }
+
+    @media screen and (max-width: $tablet-small-width) {
+      align-items: center;
+      margin-bottom: 4.1rem;
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__card {
+    max-width: 92%;
+    text-align: left;
+  }
+
+  &__info {
+    @include font($size: 1.2rem, $height: 1.8rem);
+    font-style: italic;
+    color: $color-paragraph-S;
+
+    @media screen and (max-width: $tablet-small-width) {
+      text-align: justify;
+    }
+
+    @media screen and (max-width: $tablet-small-width) {
+      max-width: 93.3%;
+    }
+  }
+
+  &__image {
+    @include size($width: 42%, $height: 26.1rem);
+    @include responsiveBgImage($bgPosition: center, $url: '../../assets/img/donation/donation-image.png');
+    order: 1;
+
+    @media screen and (max-width: $tablet-large-width) {
+      width: 71%;
+    }
+
+    @media screen and (max-width: $tablet-small-width) {
+      @include size($width: 86.6%, $height: 13.5rem);
+    }
+  }
+}

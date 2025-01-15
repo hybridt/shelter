@@ -1,0 +1,77 @@
+$button-paddings: 1.4rem 4.3rem;
+$button-border: 2px solid transparent;
+$button-border-radius: 5rem;
+
+.button {
+  @include font($size: 1.7rem, $spacing: 0.06em);
+  display: inline-block;
+  padding: $button-paddings;
+  border: $button-border;
+  border-radius: $button-border-radius;
+  transition: all $transition-duration;
+  color: $color-button-text;
+  cursor: pointer;
+
+  &_colored {
+    background-color: $color-primary;
+  }
+
+  &_bordered {
+    background-color: $color-light;
+    border-color: $color-primary;
+  }
+
+  &_inactive {
+    color: $color-inactive;
+    background-color: $color-light;
+    border-color: $color-inactive;
+  }
+
+  &_close {
+    @extend %round-button;
+    position: relative;
+    border-color: $color-primary;
+    background-color: transparent;
+    
+    &::before, &::after {
+      content: '';
+      @include position($position: absolute, $top: 50%, $left: 50%);
+      @include size($width: 17px, $height: 3px);
+      background-color: $color-mineshaft;
+      border-radius: 5px;
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+
+  &:hover {
+    background-color: $color-primary-hover;
+    border-color: $color-primary-hover;
+  }
+
+  &:active {
+    background-color: $color-primary;
+    border-color: $color-primary;
+  }
+
+  &:disabled {
+    color: $color-inactive;
+    background-color: $color-light;
+    border-color: $color-inactive;
+    cursor: auto;
+  }
+
+  .slider > & {
+    @extend %round-button;
+  }
+
+  .pagination & {
+    @extend %round-button;
+  }
+}

@@ -1,0 +1,23 @@
+.menu {
+
+  @media screen and (max-width: ($tablet-width - 1)) {
+    @include flex($justify: center);
+    @include position($position: fixed, $top: 0, $right: 0);
+    flex-direction: column;
+    width: 320px;
+    height: 100vh;
+    padding-bottom: 3.5rem;
+    transform: translateX(100%);
+    background-color: $color-menu;
+    transition: all $transition-duration;
+    z-index: 100;
+
+    &.active {
+      transform: translateX(0);
+    }
+
+    &_light {
+      background-color: $color-menu-light;
+    }
+  }
+}

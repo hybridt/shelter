@@ -1,0 +1,31 @@
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/placeholders';
+
+@import 'base/normalize';
+@import 'base/base';
+@import 'base/typography';
+
+@import 'layouts/background';
+@import 'layouts/overlay';
+@import 'layouts/header';
+@import 'layouts/menu';
+@import 'layouts/columns-3-layout';
+@import 'layouts/columns-4-layout';
+@import 'layouts/navigation';
+@import 'layouts/start';
+@import 'layouts/about';
+@import 'layouts/pets';
+@import 'layouts/help';
+@import 'layouts/donation';
+@import 'layouts/footer';
+
+@import 'components/logo';
+@import 'components/burger';
+@import 'components/icon';
+@import 'components/button';
+@import 'components/modal-window';
+@import 'components/slider';
+@import 'components/card';
+@import 'components/thing';
+@import 'components/credit-card';

@@ -1,0 +1,33 @@
+.card {
+  background-color: $color-card;
+  border-radius: $card-radius;
+  transition: all $transition-duration;
+  overflow: hidden;
+  cursor: pointer;
+
+  &__image {
+    width: 100%;
+    border-radius: $card-radius $card-radius 0 0;
+  }
+
+  &__content {
+    padding: 2.8rem 0;
+    text-align: center;
+  }
+
+  &__name {
+    margin-bottom: 3rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &:hover {
+    background-color: $color-light;
+    box-shadow: $card-shadow;
+
+    button {
+      background-color: $color-primary-hover;
+      border-color: $color-primary-hover;
+    }
+  }
+}

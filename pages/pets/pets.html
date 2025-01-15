@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="../../assets/img/favicon.ico">
+  <title>Our Pets - Shelter</title>
+</head>
+<body class="body">
+  <header class="header">
+    <div class="container">
+      <div class="header__wrapper">
+        <div class="logo">
+          <h1 class="logo__title"><a href="../main/index.html">Cozy House</a></h1>
+          <p class="logo__subtitle">Shelter for pets in Boston</p>
+        </div>
+        <nav class="navigation menu menu_light">
+          <ul class="nav-list">
+            <li><a class="nav-list__link" href="../main/index.html">About the shelter</a></li>
+            <li><a class="nav-list__link nav-list__link_selected">Our pets</a></li>
+            <li><a class="nav-list__link" href="../main/index.html#help">Help the shelter</a></li>
+            <li><a class="nav-list__link" href="#contacts">Contacts</a></li>
+          </ul>
+        </nav>
+        <div class="burger">
+          <div class="burger__line"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="pets" id="pets">
+      <div class="container">
+        <div class="pets__wrapper">
+          <h3 class="pets__title">Our friends who<br>are looking for a house</h3>
+          <div class="pets__content">
+            <div class="columns-4-layout cards-container"></div>
+          </div>
+          <nav class="pets__pagination">
+            <ul class="pagination">
+              <li class="pagination__item"><button class="to-first button button_bordered" disabled>&lt;&lt;</button></li>
+              <li class="pagination__item"><button class="prev-page button button_bordered" disabled>&lt;</button></li>
+              <li class="pagination__item"><button class="button button_bordered page-number"></button></li>
+              <li class="pagination__item"><button class="next-page button button_bordered">&gt;</button></li>
+              <li class="pagination__item"><button class="to-end button button_bordered">&gt;&gt;</button></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer" id="contacts">
+    <div class="container">
+      <div class="footer__wrapper">
+        <div class="columns-3-layout footer__content">
+          <div class="footer__contacts">
+            <h3 class="footer__contacts-title">For questions and suggestions</h3>
+            <div class="footer__email">
+              <span class="icon icon_email"></span>
+              <h4 class="footer__email-link">
+                <a href="mailto:email@shelter.com">email@shelter.com</a>
+              </h4>
+            </div>
+            <div class="footer__phone">
+              <span class="icon icon_phone"></span>
+              <a class="footer__phone-link" href="tel:+136745677554">
+                <h4>+13 674 567 75 54</h4>
+              </a>
+            </div>
+          </div>
+          <div class="footer__location">
+            <h3 class="footer__location-title">We are waiting for your visit</h3>
+            <div class="footer__location-info">
+              <span class="icon icon_location"></span>
+              <h4 class="footer__address">
+                <a href="https://goo.gl/maps/NdZbUKwP5ZXiX9EM8" target="_blank">1 Central Street, Boston (entrance from the store)</a>
+              </h4>
+            </div>
+            <div class="footer__location-info">
+              <span class="icon icon_location"></span>
+              <h4 class="footer__address">
+                <a href="https://goo.gl/maps/wZ1rBHD37QYp7ZWA7" target="_blank">18 South Park, London </a>
+              </h4>
+            </div>
+          </div>
+          <div class="footer__image"></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="pets.js"></script>
+</body>
+</html>

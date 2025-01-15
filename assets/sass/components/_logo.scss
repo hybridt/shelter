@@ -1,0 +1,13 @@
+.logo {
+  user-select: none;
+
+  &__title {
+    margin-bottom: 1rem;
+    color: $color-primary;
+  }
+
+  &__subtitle {
+    @include font($size: 1.3rem, $height: 1.5rem, $spacing: 0.12em);
+    color: $color-light;
+  }
+}

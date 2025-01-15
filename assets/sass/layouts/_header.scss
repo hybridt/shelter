@@ -1,0 +1,11 @@
+.header {
+  
+  &__wrapper {
+    @include flex($justify: space-between, $align: center);
+    padding: 3rem 0;
+
+    @media screen and (max-width: $mobile-large-width) {
+      padding: 3rem 1rem;
+    }
+  }
+}

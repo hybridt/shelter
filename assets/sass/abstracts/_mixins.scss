@@ -1,0 +1,32 @@
+@mixin flex($justify: flex-start, $align: stretch) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin font($size, $height: normal, $weight: normal, $spacing: normal) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  letter-spacing: $spacing;
+}
+
+@mixin position($position, $top: auto, $right: auto, $bottom: auto, $left: auto) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin responsiveBgImage($bgPosition: center, $url) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: $bgPosition;
+}

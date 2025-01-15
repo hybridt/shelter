@@ -1,0 +1,68 @@
+.start {
+
+  &__wrapper {
+    transition: all $transition-duration;
+
+    @include flex($justify: space-between, $align: center);
+    padding: 6rem 0 0 0;
+
+    @media screen and (max-width: $tablet-width) {
+      flex-direction: column;
+      padding: 3rem 0 0 0;
+    }
+  }
+
+  &__content {
+    max-width: 38.3%;
+
+    @media screen and (max-width: $tablet-width) {
+      max-width: 46rem;
+    }
+
+    @media screen and (max-width: $mobile-large-width) {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin-bottom: 4.2rem;
+    color: $color-header-light;
+    transition: all $transition-duration;
+  }
+
+  &__description {
+    margin-bottom: 4.2rem;
+    color: $color-paragraph-light;
+  }
+
+  &__button {
+    margin-bottom: 8rem;
+
+    @media screen and (max-width: $tablet-width) {
+      margin-bottom: 10rem;
+      text-align: center;
+    }
+
+    @media screen and (max-width: $mobile-large-width) {
+      margin-bottom: 10.5rem;
+    }
+  }
+
+  &__image {
+    @include size($width: 58%, $height: auto);
+    align-self: flex-end;
+    
+    img {
+      width: 100%;
+    }
+
+    @media screen and (max-width: $tablet-width) {
+      @include size($width: 80.3%, $height: auto);
+    }
+
+    @media screen and (max-width: $mobile-large-width) {
+      width: 86.7%;
+    }
+  }
+}

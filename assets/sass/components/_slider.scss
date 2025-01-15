@@ -1,0 +1,85 @@
+.slider {
+  @include flex($justify: space-between, $align: center);
+  gap: 4.4%;
+  transition: all $transition-duration;
+
+  &__content {
+    flex-grow: 1;
+    order: 2;
+    overflow: hidden;
+
+    @media screen and (max-width: $mobile-large-width) {
+      margin-bottom: 2rem;
+      width: 100%;
+      order: -1;
+    }
+  }
+
+  & > button {
+    flex: 0 0 auto;
+
+    &:first-child {
+      order: 1;
+    }
+
+    &:last-child {
+      order: 3;
+    }
+  }
+
+  .card:nth-child(3) {
+    display: block;
+  }
+
+  @media screen and (max-width: 950px) {
+    gap: 2%;
+    .card:nth-child(3) {
+      display: none;
+    }
+
+    .card:nth-child(2) {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: $tablet-small-width) {
+    .card:nth-child(2) {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: $mobile-large-width) {
+    justify-content: center;
+    gap: 26.6%;
+    flex-wrap: wrap;
+  }
+}
+
+// .cards-container {
+//   gap: 9%;
+//   flex-wrap: nowrap;
+
+//   & > * {
+//     flex: 0 0 27.3%
+//   }
+// }
+
+// @keyframes move-left {
+//   from {left: 0}
+//   to {left: -108.9%}
+// }
+
+// @keyframes move-right {
+//   from {right: 108.9%}
+//   to {right: 0}
+// }
+
+// .move-left {
+//   position: relative;
+//   animation: move-left 3s;
+// }
+
+// .move-right {
+//   position: relative;
+//   animation: move-right 3s;
+// }

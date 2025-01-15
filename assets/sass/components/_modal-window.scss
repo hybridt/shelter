@@ -1,0 +1,128 @@
+$modal-desktop-width: 900px;
+$modal-tablet-width: 630px;
+$modal-mobile-width: 240px;
+
+.modal-window {
+  @include position($position: absolute, $top: 50%, $left: 50%);
+  width: calc($modal-desktop-width / $content-width) * 100%;
+  max-width: $modal-desktop-width;
+  background-color: $color-modal;
+  border-radius: $card-radius;
+  transform: translate(-50%, -50%);
+
+  @media screen and (max-width: $tablet-large-width) {
+    width: calc($modal-tablet-width / $tablet-width) * 100%;
+    max-width: $modal-tablet-width;
+  }
+
+  @media screen and (max-width: 585px) {
+    width: calc($modal-mobile-width / $mobile-width) * 100%;
+    max-width: $modal-mobile-width;
+  }
+}
+
+.modal-window__button {
+  @include position($position: absolute, $top: -52px, $right: -42px);
+  padding: 2rem;
+
+  @media screen and (max-width: 585pxh) {
+    right: -30px;
+  }
+}
+
+.pet-modal {
+  @include flex($justify: space-between, $align: center);
+
+  @media screen and (max-width: 585px) {
+    flex-direction: column;
+  }
+}
+
+.pet-modal__content {
+  margin-right: 2rem;
+  padding: 5rem 0 8rem;
+  max-width: calc(351px / $modal-desktop-width) * 100%;
+  transition: all $transition-duration;
+  
+  & > * {
+    color: #000;
+  }
+
+  @media screen and (max-width: $tablet-large-width) {
+    margin-right: 0.5rem;
+    padding: 1rem 0 3rem;
+    max-width: calc(265px / $modal-tablet-width) * 100%;
+  }
+
+  @media screen and (max-width: 585px) {
+    margin: 0;
+    padding: 1rem;
+    max-width: 100%;
+  }
+}
+
+.pet-modal__image {
+  width: calc(500px / $modal-desktop-width) * 100%;
+  max-width: 500px;
+  padding: 0.3rem;
+
+  @media screen and (max-width: $tablet-large-width) {
+    max-width: 350px;
+  }
+
+  @media screen and (max-width: 585px) {
+    display: none;
+  }
+}
+
+.pet-modal__name {
+  margin-bottom: 1rem;
+  
+  @media screen and (max-width: 585px) {
+    @include font($size: 3.5rem, $height: 4.5rem, $spacing: 0.06em);
+    text-align: center;
+  }
+}
+
+.pet-modal__type {
+  margin-bottom: 4rem;
+
+  @media screen and (max-width: $tablet-large-width) {
+    margin-bottom: 2rem;
+  }
+
+  @media screen and (max-width: 585px) {
+    text-align: center;
+  }
+}
+
+.pet-modal__description {
+  margin-bottom: 4rem;
+
+  @media screen and (max-width: $tablet-large-width) {
+    @include font($size: 1.3rem, $height: 1.4rem, $spacing: 0.06em);
+    margin-bottom: 2rem;
+  }
+
+  @media screen and (max-width: 585px) {
+    margin-bottom: 2.4rem;
+    text-align: justify;
+  }
+}
+
+.pet-modal__info {
+  @include font($size: 1.5rem, $height: 1.7rem, $spacing: 0.06em);
+  padding-left: 1.6rem;
+
+  li {
+    margin-bottom: 1.1rem;
+
+    @media screen and (max-width: $tablet-large-width) {
+      margin-bottom: 0.6rem;
+    }
+  }
+
+  .pet-modal__feature {
+    font-weight: bold;
+  }
+}

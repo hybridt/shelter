@@ -1,0 +1,63 @@
+@keyframes update-content {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+.pets {
+  background-color: $color-background;
+
+  &__wrapper {
+    padding: $section-paddings;
+    text-align: center;
+    transition: all $transition-duration;
+
+    @media screen and (max-width: $mobile-large-width) {
+      padding: $mobile-section-paddings;
+    }
+  }
+
+  &__title {
+    margin-bottom: 6rem;
+    transition: all $transition-duration;
+
+    @media screen and (max-width: $mobile-large-width) {
+      margin-bottom: 4.2rem;
+    }
+  }
+
+  &__button {
+    margin-top: 6rem;
+
+    @media screen and (max-width: $mobile-large-width) {
+      margin-top: 4.2rem;
+    }
+  }
+
+  &__pagination {
+    margin-top: 6rem;
+
+    @media screen and (max-width: $tablet-large-width) {
+      margin-top: 4rem;
+    }
+
+    @media screen and (max-width: $tablet-small-width) {
+      margin-top: 4.6rem;
+    }
+  }
+
+  &__content {
+    margin: auto;
+
+    @media screen and (max-width: $tablet-large-width) {
+      max-width: 82%;
+    }
+
+    @media screen and (max-width: $tablet-small-width) {
+      max-width: 100%;
+    }
+  }
+}
+
+.upd-content {
+  animation: update-content 0.3s;
+}

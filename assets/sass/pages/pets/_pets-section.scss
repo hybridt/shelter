@@ -1,0 +1,19 @@
+.pets__wrapper {
+  @media screen and (max-width: $tablet-large-width) {
+    padding-bottom: 8rem;
+  }
+
+  @media screen and (max-width: $tablet-small-width) {
+    padding-bottom: 4.2rem;
+  }
+}
+
+.pets__title {
+  @media screen and (max-width: $tablet-large-width) {
+    margin-bottom: 3rem;
+  }
+
+  @media screen and (max-width: $tablet-small-width) {
+    margin-bottom: 4.2rem;
+  }
+}

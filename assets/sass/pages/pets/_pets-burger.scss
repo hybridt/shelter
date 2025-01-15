@@ -1,0 +1,13 @@
+.burger {
+  &::before {
+    @extend %burger-line-dark;
+  }
+
+  &::after {
+    @extend %burger-line-dark;
+  }
+}
+
+.burger__line {
+  @extend %burger-line-dark;
+}
